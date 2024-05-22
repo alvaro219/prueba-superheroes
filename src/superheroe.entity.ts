@@ -1,23 +1,29 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToOne,
+  JoinColumn,
+} from 'typeorm';
 import { Habilidad } from './habilidad.entity';
 import { Liga } from './liga.entity';
 
 @Entity()
 export class Superheroe {
-    @PrimaryGeneratedColumn()
-    id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    nombre: string;
+  @Column()
+  nombre: string;
 
-    @Column()
-    apellidos: string;
+  @Column()
+  apellidos: string;
 
-    @ManyToOne(() => Habilidad)
-    @JoinColumn()
-    habilidad: Habilidad;
+  @ManyToOne(() => Habilidad)
+  @JoinColumn()
+  habilidad: Habilidad;
 
-    @ManyToOne(() => Liga)
-    @JoinColumn()
-    liga: Liga;
+  @ManyToOne(() => Liga)
+  @JoinColumn()
+  liga: Liga;
 }
