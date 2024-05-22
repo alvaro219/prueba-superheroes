@@ -15,7 +15,7 @@ export class SuperheroeService {
   }
 
   findOne(id: number): Promise<Superheroe> {
-    return this.superheroeRepository.findOne(id);
+    return this.superheroeRepository.findOneBy({ id });
   }
 
   async remove(id: number): Promise<void> {
