@@ -1,9 +1,10 @@
 import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
 import { CreateLeagueDto } from './create-league.dto';
+import { LigaService } from './liga.service'; // Importa LigaService
 
 @Controller('liga')
 export class LigaController {
-  constructor(private readonly ligaService: LigaController) {}
+  constructor(private readonly ligaService: LigaService) {} // Inyecta LigaService en el constructor
 
   @Post()
   create(@Body() createLeagueDto: CreateLeagueDto) {
