@@ -9,8 +9,8 @@ export class Habilidad {
   nombre: string;
 
   @Column()
-  poder: string;
+  poder: number;
 
   @Column()
-  defensa: string;
+  defensa: number;
 }

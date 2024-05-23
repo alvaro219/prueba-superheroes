@@ -12,12 +12,12 @@ export class SuperheroeController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string): Promise<Superheroe> {
+  findOne(@Param('id') id: number): Promise<Superheroe> {
     return this.superheroeService.findOne(+id);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string): Promise<void> {
+  remove(@Param('id') id: number): Promise<void> {
     return this.superheroeService.remove(+id);
   }
 }
