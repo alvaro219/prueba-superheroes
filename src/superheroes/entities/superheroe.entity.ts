@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
-import { Habilidad } from './habilidad.entity';
-import { Liga } from './liga.entity';
+import { Habilidad } from 'src/habilidades/entities/habilidad.entity';
+import { Liga } from 'src/liga/entities/liga.entity';
 
 @Entity()
 export class Superheroe {

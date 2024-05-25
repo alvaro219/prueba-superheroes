@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
-import { CreateLeagueDto } from './create-league.dto';
+import { CreateLeagueDto } from 'src/users/dto/create-league.dto';
 import { LigaService } from './liga.service';
 
 @Controller('liga')

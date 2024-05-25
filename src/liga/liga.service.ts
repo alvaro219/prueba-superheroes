@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { CreateLeagueDto } from './create-league.dto';
+import { CreateLeagueDto } from 'src/users/dto/create-league.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Liga } from 'src/liga.entity';
+import { Liga } from './entities/liga.entity';
 
 @Injectable()
 export class LigaService {

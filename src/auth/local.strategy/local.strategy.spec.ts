@@ -1,5 +1,5 @@
 import { LocalStrategy } from './local.strategy';
-import { AuthService } from '../jwt.strategy/auth.service';
+import { AuthService } from '../auth.service';
 
 describe('LocalStrategy', () => {
   let localStrategy: LocalStrategy;

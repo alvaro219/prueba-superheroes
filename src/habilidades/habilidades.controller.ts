@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
 import { HabilidadesService } from './habilidades.service';
-import { CreateAbilityDto } from './create-ability.dto';
+import { CreateAbilityDto } from '../users/dto/create-ability.dto';
 
 @Controller('habilidades')
 export class HabilidadesController {

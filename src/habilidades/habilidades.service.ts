@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { CreateAbilityDto } from './create-ability.dto';
+import { CreateAbilityDto } from 'src/users/dto/create-ability.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Habilidad } from 'src/habilidad.entity';
+import { Habilidad } from './entities/habilidad.entity';
 
 @Injectable()
 export class HabilidadesService {
