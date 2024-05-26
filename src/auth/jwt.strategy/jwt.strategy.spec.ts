@@ -3,7 +3,7 @@ import { AuthService } from '../auth.service';
 
 describe('JwtStrategy', () => {
   it('should be defined', () => {
-    const authServiceMock = {} as AuthService; // Puedes utilizar un mock de AuthService si es necesario
+    const authServiceMock = {} as AuthService;
     expect(new JwtStrategy(authServiceMock)).toBeDefined();
   });
 });

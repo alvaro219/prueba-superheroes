@@ -1,37 +1,28 @@
 services:
   api:
-    # En tu dockerfile tienes node:16. Mejor utilizar la LTS cuando sea posible, y tus dependencias lo permitan.
+
     image: node:18
     working_dir: /app
-    # Esto monta la carpeta actual en /app dentro del contenedor.
-    # Lo bueno es que si cambias archivos, los cambias también dentro del contenedor, con
-    # lo que la recarga en caliente funciona.
+
     volumes:
       - ./src:/app/src
       - ./package.json:/app/package.json
       - ./package-lock.json:/app/package-lock.json
       - ./tsconfig.json:/app/tsconfig.json
-    # Esto es importante para poder acceder a la API desde localhost:3000
+
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=development
       - PORT=3000
     command: sh -c "npm install && npm run start:dev"
-    # Esto conecta el contenedor de la base de datos con el de la API, y hace que no tengas
-    # que exponer el puerto de la base de datos al exterior.
-    # ¿Porqué esto es importante? Si trabajas mucho con bases de datos, evetualmente alguna
-    # se te queda abierta en el PC, y si tienes que abrir otra, te dará un error porque el puerto
-    # está ocupado. Lo digo porque literalmente me ha pasado.
+
     depends_on:
       - db
 
   db:
     image: postgres:13
-    # Aquí NO exponemos el puerto porque no hace falta. La API se conecta a la base de datos
-    # con el "depends_on" que hemos puesto en el servicio anterior.
-    # ports:
-    #   - "5432:5432"
+
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
