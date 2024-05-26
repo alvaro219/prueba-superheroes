@@ -8,10 +8,10 @@ export class AuthService {
     constructor(
         private usersService: UsersService,
         private jwtService: JwtService
-    ) {}
+    ) { }
 
     async validateUser(username: string, pass: string) {
-        const user = await this.usersService.findOne(username);
+        const user = await this.usersService.findOneByUsername(username);
         if (user && await bcrypt.compare(pass, user.password)) {
             const { ...result } = user; 
             return result;

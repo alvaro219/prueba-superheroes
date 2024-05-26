@@ -1,4 +1,3 @@
-// users.service.ts
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -9,6 +8,8 @@ import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersService {
+  private users: User[] = [];
+
   constructor(
     @InjectRepository(User)
     private usersRepository: Repository<User>,
@@ -21,6 +22,21 @@ export class UsersService {
       password: hashedPassword,
     });
     return this.usersRepository.save(newUser);
+  }
+
+  async findAll(): Promise<User[]> {
+    return this.users;
+  }
+
+  async findOne(id: number): Promise<User> {
+    return this.usersRepository.findOne({
+      where: { id },
+      relations: ['superheroes'],
+    });
+  }
+
+  async findOneByUsername(username: string): Promise<User> {
+    return this.users.find(user => user.username === username);
   }
 
   async findByUsername(username: string): Promise<User | undefined> {
