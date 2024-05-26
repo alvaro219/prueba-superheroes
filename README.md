@@ -51,6 +51,41 @@ $ yarn start
 
 [http://localhost:3000/docs](http://localhost:3000/docs) for api and DB direct management
 
+## Functions
+**In localhost:3000**
+--> POST /superheroes
+```bash
+{
+  "id": number,
+  "nombre": "string",
+  "apellidos": "string"
+}
+```
+
+--> POST /habilidades
+```bash
+{
+  "id": number,
+  "nombre": "string",
+  "poder": number,
+  "defensa": number
+}
+```
+
+--> POST liga
+```bash
+{
+  "id": number,
+  "nombre": "string",
+  "superheroes": [
+    {
+      "id": number,
+      "nombre": "string",
+      "apellidos": "string"
+    }
+  ]
+}
+```
 
 ## Support
 
