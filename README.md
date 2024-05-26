@@ -87,7 +87,7 @@ $ yarn start
   ]
 }
 ```
-After that, you should been able to see your creation at [http://localhost:5173/#/superheroes](http://localhost:5173/#/superheroes)
+After that, you should been able to see your creation going to [http://localhost:5173/#/](http://localhost:5173/#/) and then clicking on "Go to Superheroes" option.
 
 ## Support
 
