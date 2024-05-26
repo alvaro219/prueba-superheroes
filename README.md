@@ -53,6 +53,7 @@ $ yarn start
 
 ## Functions
 **In localhost:3000**
+
 --> POST /superheroes
 ```bash
 {
@@ -86,6 +87,7 @@ $ yarn start
   ]
 }
 ```
+after that, you should been able to see your creation at [http://localhost:5173/#/superheroes](http://localhost:5173/#/superheroes)
 
 ## Support
 
