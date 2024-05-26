@@ -52,7 +52,7 @@ $ yarn start
 [http://localhost:3000/docs](http://localhost:3000/docs) for api and DB direct management
 
 ## Functions
-**In localhost:3000**
+**In http://localhost:3000/docs**
 
 --> POST /superheroes
 ```bash
@@ -87,7 +87,7 @@ $ yarn start
   ]
 }
 ```
-after that, you should been able to see your creation at [http://localhost:5173/#/superheroes](http://localhost:5173/#/superheroes)
+After that, you should been able to see your creation at [http://localhost:5173/#/superheroes](http://localhost:5173/#/superheroes)
 
 ## Support
 
