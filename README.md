@@ -54,7 +54,7 @@ $ yarn start
 
 ## Support
 
-If you find it useful, dont forget to go to my personal page at [alvaro219](https://alvaro219.github.io)
+If you find it useful, dont forget to go to my personal page at [alvaro219.github.io](https://alvaro219.github.io)
 
 
 ## License
