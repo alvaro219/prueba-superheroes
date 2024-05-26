@@ -11,4 +11,4 @@ import { Liga } from '../liga/entities/liga.entity';
   controllers: [SuperheroeController],
   providers: [SuperheroeService],
 })
-export class SuperheroeModule {}
+export class SuperheroeModule { }

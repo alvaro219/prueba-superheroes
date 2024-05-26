@@ -1,4 +1,8 @@
+import { ApiProperty } from "@nestjs/swagger";
+import { IsNotEmpty } from "class-validator";
+
 export class CreateLeagueDto {
-    nombre: string;
-  }
-  
+  @ApiProperty()
+  @IsNotEmpty()
+  nombre: string;
+}

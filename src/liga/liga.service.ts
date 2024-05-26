@@ -9,7 +9,7 @@ export class LigaService {
   constructor(
     @InjectRepository(Liga)
     private ligaRepository: Repository<Liga>,
-  ) {}
+  ) { }
 
   create(createLeagueDto: CreateLeagueDto): Promise<Liga> {
     const liga = new Liga();

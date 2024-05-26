@@ -4,7 +4,7 @@ import { LigaService } from './liga.service';
 
 @Controller('liga')
 export class LigaController {
-  constructor(private readonly ligaService: LigaService) {}
+  constructor(private readonly ligaService: LigaService) { }
 
   @Post()
   create(@Body() createLeagueDto: CreateLeagueDto) {

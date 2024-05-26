@@ -1,6 +1,5 @@
 export class CreateAbilityDto {
-    nombre: string;
-    poder: number;
-    defensa: number;
-  }
-  
+  nombre: string;
+  poder: number;
+  defensa: number;
+}

@@ -10,7 +10,7 @@ export class SuperheroeService {
   constructor(
     @InjectRepository(Superheroe)
     private superheroeRepository: Repository<Superheroe>,
-  ) {}
+  ) { }
 
   findAll(): Promise<Superheroe[]> {
     return this.superheroeRepository.find();
